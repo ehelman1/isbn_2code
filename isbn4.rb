@@ -18,6 +18,25 @@ def correct_length?(input_string)
    end
 end
 
+def valid_isbn10?(input_string)
+	valid_isbn?(input_string)
+
+
+
+
+end
+
+
+def x_checker(input_array)
+	if input_array[9] == "X" || input_array[9] == "x"
+		input_array[9] = "10"
+	end 
+	input_array
+end
+
+
+
+
 def valid_isbn13?(input_string)
    array_of_strings = convert_string_to_array(input_string)
    array_of_intergers = multiply_array(array_of_strings)
@@ -72,3 +91,4 @@ def isbn13_checksum(input_string)
    check_sum = subtraction(summed_array)
    check_sum
 end
+
