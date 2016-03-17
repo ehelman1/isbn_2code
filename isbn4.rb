@@ -19,11 +19,21 @@ def correct_length?(input_string)
 end
 
 def valid_isbn10?(input_string)
-	valid_isbn?(input_string)
-
-
-
-
+	array = []
+		input_string.each do |value|
+		array << value.to_i
+		end
+	sum = 0
+		array.each_with_index do |value, index|
+			break if index == 9
+			sum += value * (index + 1 )
+		end
+	check_digit = sum % 11
+		if check_digit == input_string[9]
+			true
+		else
+			false
+	end
 end
 
 
