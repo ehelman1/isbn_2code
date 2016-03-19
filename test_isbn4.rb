@@ -77,6 +77,6 @@ class TestIsbnChecker < Minitest::Test
 	end
 	
 	def test_valid_isbn10_math_true
-		assert_equal(true, valid_isbn10?(["0","3","0","6","4","0","6","1","5","2"]))
+		assert_equal(true, valid_isbn10?(["0306406152"]))
 	end
 end
