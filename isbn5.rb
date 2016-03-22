@@ -21,7 +21,7 @@ def split_string(string)
 	string.split("")
 end
 
-def isbn13(input_array)
+def multiply_isbn13(input_array)
 	array = []
 	input_array.each_with_index do|value, index|
 	value = value.to_i
@@ -33,6 +33,15 @@ def isbn13(input_array)
 	end
 	array
 end
-	
+
+def sum_isbn13(input_array)
+	sum = 0
+	items_to_be_added = input_array.length - 1
+	input_array.each_with_index do |value, index|
+		break if index == items_to_be_added
+		sum = sum + value
+	end
+	sum
+end
 	
 	

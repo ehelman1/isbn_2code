@@ -23,9 +23,13 @@ class TestIsbn < Minitest::Test
 	end
 	
 	def test_multiply_array_1_and_3
-		assert_equal([1,3,1,3,1,3], isbn13(["1","1","1","1","1","1"]))
+		assert_equal([1,3,1,3,1,3], multiply_isbn13(["1","1","1","1","1","1"]))
+		assert_equal([2,12,6,24], multiply_isbn13(["2","4","6","8"]))
 	end
 
+	def test_sum_of_array_13
+		assert_equal(20, sum_isbn13([2,12,6,24]))
+	end
 
 
 
