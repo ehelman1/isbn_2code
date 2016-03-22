@@ -17,6 +17,14 @@ class TestIsbn < Minitest::Test
 		assert_equal("0471958697", remove_invalid("04 71-95-8697"))
 		assert_equal("9780470059029", remove_invalid("97-80 4700-59 0-29"))
 	end
+	
+	def test_convert_string_to_array
+		assert_equal(["1","2","3","4"], split_string("1234"))
+	end
+	
+	def test_multiply_array_1_and_3
+		assert_equal([1,3,1,3,1,3], isbn13(["1","1","1","1","1","1"]))
+	end
 
 
 
