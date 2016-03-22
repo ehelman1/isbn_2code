@@ -11,3 +11,8 @@ def correct_length?(string)
 		false
 	end
 end
+
+def remove_invalid(string)
+	string.delete!(" ")
+	string.delete!("-")
+end

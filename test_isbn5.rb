@@ -12,6 +12,11 @@ class TestIsbn < Minitest::Test
 		assert_equal(true, correct_length?("0471958697"))
 		assert_equal(true, correct_length?("9780470059029"))
 	end
+	
+	def test_spaces_and_hyphens_are_removed
+		assert_equal("0471958697", remove_invalid("04 71-95-8697"))
+		assert_equal("9780470059029", remove_invalid("97-80 4700-59 0-29"))
+	end
 
 
 
